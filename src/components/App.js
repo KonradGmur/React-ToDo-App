@@ -73,12 +73,21 @@ class App extends Component {
     ]
   }
 
+  deleteTask = (id) => {
+    console.log('delete elementu o id ' + id);
+
+  }
+  changeTaskStatus = (id) => {
+    console.log('change w w stanie elementu o id ' + id);
+
+  }
+
   render() {
     return (
       <div className='App'>
         Aplikacja TODO
         <AddTask />
-        <TaskList tasks={this.state.tasks} />
+        <TaskList tasks={this.state.tasks} delete={this.deleteTask} change={this.changeTaskStatus} />
       </div>
     );
   }
