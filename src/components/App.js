@@ -20,7 +20,7 @@ class App extends Component {
         text: 'Posprzątać mieszkanie',
         date: '2020-08-11',
         important: true,
-        active: false,
+        active: true,
         finishDate: null
       },
       {
