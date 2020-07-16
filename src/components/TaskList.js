@@ -8,7 +8,7 @@ const TaskList = (props) => {
 
     done.sort((a, b) => b.finishDate - a.finishDate)
 
-    if (active.length >= 2) {
+    if (active.length >= 3) {
         active.sort((a, b) => {
 
             a = a.text.toLowerCase();
