@@ -22,12 +22,25 @@ class AddTask extends Component {
 
     handleDate = (e) => {
         this.setState({
-            date: e.target.value
+            date: e.target.value,
         })
     }
 
     handleClick = () => {
+        const { text, checked, date } = this.state;
+        if (text.length > 2) {
+            const add = this.props.add(text, date, checked);
+            if (add) {
+                this.setState({
+                    text: '',
+                    checked: false,
+                    date: this.minDate
+                })
+            }
+        } else {
+            console.log('Za krótka nazwa');
 
+        }
     }
 
     render() {
